@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.ilivedemo.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="登录" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/vadio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.tencent.ilivesdk.view.AVRootView
+            android:id="@+id/av_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWrite" />
+        <Button
+            android:id="@+id/switchchoice"
+            android:text="选择"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/create_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/choice"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="创建房间"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/quit_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/choice"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="退出房间"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/input_join_roomid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWrite"
+                android:hint="请输入要加入房间的ID" />
+
+            <Button
+                android:id="@+id/join_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/choice"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:text="加入房间" />
+
+            <EditText
+                android:id="@+id/input_link_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWrite"
+                android:hint="请输入房主ID" />
+
+            <Button
+                android:id="@+id/across"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跨房连麦" />
+
+            <Button
+                android:id="@+id/accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="接受跨房" />
+
+            <Button
+                android:id="@+id/refuseLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跨房连麦" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
